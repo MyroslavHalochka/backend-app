@@ -19,8 +19,8 @@ public class CustomerServiceImpl implements CustomerService {
 
         Customer customer = new Customer(
 
-                customerSave.getCustomername(),
-                customerSave.getCustomeraddress(),
+                customerSave.getCustomerName(),
+                customerSave.getCustomerAddress(),
                 customerSave.getMobile()
 
         );
@@ -39,12 +39,12 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void updateCustomers(Customer customerUpdate) {
 
-        if (customerRepository.existsById(customerUpdate.getCustomerid())) {
+        if (customerRepository.existsById(customerUpdate.getCustomerId())) {
 
-            Customer customer = customerRepository.getReferenceById(customerUpdate.getCustomerid());
+            Customer customer = customerRepository.getReferenceById(customerUpdate.getCustomerId());
 
-            customer.setCustomername(customerUpdate.getCustomername());
-            customer.setCustomeraddress(customerUpdate.getCustomeraddress());
+            customer.setCustomerName(customerUpdate.getCustomerName());
+            customer.setCustomerAddress(customerUpdate.getCustomerAddress());
             customer.setMobile(customerUpdate.getMobile());
 
             customerRepository.save(customer);

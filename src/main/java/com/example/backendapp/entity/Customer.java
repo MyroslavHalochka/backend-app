@@ -14,72 +14,94 @@ public class Customer {
     @Id
     @Column(name = "customer_id", length = 50)
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int customerid;
+    private int customerId;
 
     @Column(name = "customer_name", length = 50)
-    private String customername;
+    private String customerName;
 
     @Column(name = "customer_address", length = 60)
-    private String customeraddress;
+    private String customerAddress;
 
     @Column(name = "mobile", length = 12)
     private int mobile;
 
-    public Customer(int customerid, String customername, String customeraddress, int mobile) {
-        this.customerid = customerid;
-        this.customername = customername;
-        this.customeraddress = customeraddress;
+    public Customer(int customerId, String customerName, String customerAddress, int mobile) {
+
+        this.customerId = customerId;
+        this.customerName = customerName;
+        this.customerAddress = customerAddress;
         this.mobile = mobile;
+
     }
 
-    public Customer() {
-    }
+    public Customer() {}
 
-    public Customer(String customername, String customeraddress, int mobile) {
-        this.customername = customername;
-        this.customeraddress = customeraddress;
+    public Customer(String customerName, String customerAddress, int mobile) {
+
+        this.customerName = customerName;
+        this.customerAddress = customerAddress;
         this.mobile = mobile;
+
     }
 
-    public int getCustomerid() {
-        return customerid;
+    public int getCustomerId() {
+
+        return customerId;
+
     }
 
-    public void setCustomerid(int customerid) {
-        this.customerid = customerid;
+    public void setCustomerId(int customerId) {
+
+        this.customerId = customerId;
+
     }
 
-    public String getCustomername() {
-        return customername;
+    public String getCustomerName() {
+
+        return customerName;
+
     }
 
-    public void setCustomername(String customername) {
-        this.customername = customername;
+    public void setCustomerName(String customerName) {
+
+        this.customerName = customerName;
+
     }
 
-    public String getCustomeraddress() {
-        return customeraddress;
+    public String getCustomerAddress() {
+
+        return customerAddress;
+
     }
 
-    public void setCustomeraddress(String customeraddress) {
-        this.customeraddress = customeraddress;
+    public void setCustomerAddress(String customerAddress) {
+
+        this.customerAddress = customerAddress;
+
     }
 
     public int getMobile() {
+
         return mobile;
+
     }
 
     public void setMobile(int mobile) {
+
         this.mobile = mobile;
+
     }
 
     @Override
     public String toString() {
+
         return "Customer{" +
-                "customerid=" + customerid +
-                ", customername='" + customername + '\'' +
-                ", customeraddress='" + customeraddress + '\'' +
+                "customerId=" + customerId +
+                ", customerName='" + customerName + '\'' +
+                ", customerAddress='" + customerAddress + '\'' +
                 ", mobile=" + mobile +
                 '}';
+
     }
+
 }
